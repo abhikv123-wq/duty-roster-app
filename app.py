@@ -104,5 +104,8 @@ def login_logout_handler(login_clicks, logout_clicks, username, password, logged
         return logged_in, {'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'height': '70vh'}, {'display': 'none'}, "", {'display': 'none'}, {'display': 'none'}, "", "", login_clicks
 
 # Run app
+import os
+
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', port=8086, debug=False)
+    port = int(os.environ.get("PORT", 8080))
+    app.run_server(host='0.0.0.0', port=port, debug=False)
