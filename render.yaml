@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: duty-roster-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app.server
+    envVars:
+      - key: DASH_ENV
+        value: production

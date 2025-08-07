@@ -7,6 +7,7 @@ import sqlite3
 
 # Initialize Dash
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.FLATLY])
+server = app.server
 
 # Connect to SQLite and build user_db dict
 def build_user_db():
