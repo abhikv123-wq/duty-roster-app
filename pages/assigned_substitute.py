@@ -12,7 +12,7 @@ import dash_bootstrap_components as dbc
 import io
 import calendar
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, 'config\Data.xlsx')
+filename = os.path.join('pages', 'config', 'Data.xlsx')
 
 dash.register_page(__name__,path='/assigned_substitute')
 df = pd.read_excel(filename,sheet_name='shifts')

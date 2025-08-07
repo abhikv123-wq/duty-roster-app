@@ -14,7 +14,7 @@ from io import BytesIO
 from xlsxwriter import Workbook
 
 dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, 'config\Data.xlsx')
+filename = os.path.join('pages', 'config', 'Data.xlsx')
 
 dash.register_page(__name__,path='/substitute_employee_data')
 
