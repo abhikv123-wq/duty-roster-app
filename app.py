@@ -4,25 +4,13 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
 import bcrypt
 import sqlite3
-import flask
+
 
 # Initialize Dash
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
 
-from flask import Flask
-import os
 
-# Assuming you already have app = Flask(__name__) somewhere in your code
-@app.route("/show-path")
-def show_path():
-    paths_found = []
-    for root, dirs, files in os.walk("."):
-        if "shift_roster.xlsx" in files:
-            paths_found.append(os.path.join(root, "shift_roster.xlsx"))
-    if not paths_found:
-        return "shift_roster.xlsx not found anywhere!", 404
-    return "<br>".join(paths_found)
 
 # Connect to SQLite and build user_db dict
 def build_user_db():
