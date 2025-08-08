@@ -19,7 +19,8 @@ from html import unescape
 dash.register_page(__name__,path='/')
 
 dirname = os.path.dirname(__file__)
-#filename = os.path.join(dirname, 'config\Data.xlsx')
+filename = os.path.join(dirname, 'config', 'shift_roster.xlsx')
+
 
 
 def serve_layout():
