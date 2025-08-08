@@ -128,7 +128,7 @@ def update_roster(start_date,end_date,n_clicks):
 
         # get group detail as per shift date
         # Get Shift Employee Data
-        filename = os.path.join(dirname, 'config\shift_roster.xlsx')
+        filename = os.path.join(BASE_DIR, "config", "shift_roster.xlsx")
         df = pd.read_excel(filename)
         morning_shift = df[df['Date'] == temp]['Morning'].values[0]
         evening_shift = df[df['Date'] == temp]['Evening'].values[0]
