@@ -18,8 +18,12 @@ from html import unescape
 
 dash.register_page(__name__,path='/')
 
-dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, 'config', 'shift_roster.xlsx')
+import os
+
+# Get absolute path relative to this file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+filename = os.path.join(BASE_DIR, "config", "shift_roster.xlsx")
+
 
 
 
